@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  onInputHandler(event: Event) {
-    let input = event.target as HTMLInputElement;
-    this.username = input.value;
-  }
-  username = ""
+  user = {
+    name : '',
+    age : 0
+  };
 }
