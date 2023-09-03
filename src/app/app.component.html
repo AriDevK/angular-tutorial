@@ -1,7 +1,6 @@
-<h1>Property Binding</h1>
-<hr>
+<h1>Events</h1>
 
-<label for="name">Username</label>
-<input type="text" [value]="user.name">
-
-<button [disabled]="btnDisabled">Submit</button>
+<h1>{{counter}}</h1>
+<button (click)="increaseCounter()">Increase</button>
+<button (click)="decreaseCounter()">Decrease</button>
+<button (click)="resetCounter()">Reset Counter</button>
