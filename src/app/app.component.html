@@ -1,7 +1,7 @@
-<h1>Hello my name is {{name}} and I'm {{age}} yo</h1>
+<h1>Property Binding</h1>
+<hr>
 
-<p>This is my current profile pic</p>
-<img src={{profilePic}} alt="Profile picture">
+<label for="name">Username</label>
+<input type="text" [value]="user.name">
 
-<p>Also this is a random image</p>
-<img src={{randomPic}} alt="Random Image">
+<button [disabled]="btnDisabled">Submit</button>

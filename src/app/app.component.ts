@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-tutorial';
-  name = 'Ariadne';
-  age = 22;
+  user = {
+    name : 'Ariadne',
+    age : 22,
+  };
   profilePic = 'https://avatars.githubusercontent.com/u/42656298?v=4';
-  randomPic = 'https://source.unsplash.com/random'
+  randomPic = 'https://source.unsplash.com/random';
+  btnDisabled = true;
 }
