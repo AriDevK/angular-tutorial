@@ -1,0 +1,31 @@
+.fumoGrid {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+
+  div {
+    margin-top: 20px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    height: 100%;
+
+    h3{
+      font-weight: bolder;
+    }
+
+    img{
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .fumoGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
+    text-align: center;
+    margin-top: 40px;
+  }
+}

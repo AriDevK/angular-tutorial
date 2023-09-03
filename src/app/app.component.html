@@ -1,10 +1,9 @@
-<h1>ngFor With Complex Objects</h1>
+<h1>Fumo Product List</h1>
 <hr>
 
-<h2>Fumo List</h2>
-
-<div *ngFor="let fumo of fumoProducts">
-  <h3>{{ fumo.name }} ${{ fumo.price }}</h3>
-  <img [src]="fumo.image" height="200px" alt={{fumo.name}}>
-  <br><br>
+<div class="fumoGrid">
+  <div *ngFor="let fumo of fumoProducts">
+    <h3>{{ fumo.name }} ${{ fumo.price }}</h3>
+    <img [src]="fumo.image" alt={{fumo.name}}>
+  </div>
 </div>

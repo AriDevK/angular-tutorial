@@ -10,27 +10,27 @@ export class AppComponent {
   fumoProducts: Fumo[] = [
     {
       name : "Yuyuko",
-      price : 60,
+      price : 80,
       image : "./assets/images/yuyukoFumo.jpg"
     },
     {
       name : "Cirno",
-      price : 60,
+      price : 50,
       image : "./assets/images/cirnoFumo.jpg"
     },
     {
       name : "Reimu",
-      price : 60,
+      price : 65,
       image : "./assets/images/reimuFumo.jpg"
     },
     {
       name : "Marisa",
-      price : 60,
+      price : 65,
       image : "./assets/images/marisaFumo.jpg"
     },
     {
       name : "Scarlet",
-      price : 60,
+      price : 55,
       image : "./assets/images/scarletFumo.jpg"
     }
   ];
