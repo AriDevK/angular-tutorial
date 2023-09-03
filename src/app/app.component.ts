@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  user = {
-    name : '',
-    age : 0
-  };
+  friends: string[] = [
+    'Ari',
+    'Ayken',
+    'Kayzen',
+    'Vasirus'
+  ]
 }
