@@ -1,10 +1,10 @@
-<h1>ngFor Dynamic</h1>
+<h1>ngFor With Complex Objects</h1>
+<hr>
 
-<label for="todo">Insert a new Task:</label> <br>
-<input type="text" [(ngModel)]="newTask" (keyup.Enter)="keyHandler()">
-<button (click)="addTask()">Add</button>
+<h2>Fumo List</h2>
 
-<h2 *ngIf="todos.length === 0">Please insert tasks</h2>
-<ul *ngFor="let task of todos; index as i">
-  <li>{{ task }} <span (click)="deleteTask(i)" style="color: red;">[ DELETE ]</span> </li>
-</ul>
+<div *ngFor="let fumo of fumoProducts">
+  <h3>{{ fumo.name }} ${{ fumo.price }}</h3>
+  <img [src]="fumo.image" height="200px" alt={{fumo.name}}>
+  <br><br>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Fumo } from "./fumo.model";
 
 @Component({
   selector: 'app-root',
@@ -6,20 +7,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  deleteTask(index: number) {
-    this.todos.splice(index, 1);
-
-  }
-
-  keyHandler() {
-    this.addTask()
-  }
-
-  addTask() {
-    this.todos.push(this.newTask);
-    this.newTask = '';
-  }
-
-  todos: string[] = []
-  newTask: string = ''
+  fumoProducts: Fumo[] = [
+    {
+      name : "Yuyuko",
+      price : 60,
+      image : "./assets/images/yuyukoFumo.jpg"
+    },
+    {
+      name : "Cirno",
+      price : 60,
+      image : "./assets/images/cirnoFumo.jpg"
+    },
+    {
+      name : "Reimu",
+      price : 60,
+      image : "./assets/images/reimuFumo.jpg"
+    },
+    {
+      name : "Marisa",
+      price : 60,
+      image : "./assets/images/marisaFumo.jpg"
+    },
+    {
+      name : "Scarlet",
+      price : 60,
+      image : "./assets/images/scarletFumo.jpg"
+    }
+  ];
 }
