@@ -1,14 +1,22 @@
-<h1>ngModel</h1>
+<h1>ngIf</h1>
 
-<label for="username">Insert your username: </label>
-<input type="text" required #nameInput="ngModel" [(ngModel)]="user.name">
+<label for="name">Insert your username: </label>
+<input type="text" [(ngModel)]="user.name">
 <br>
-<p>Is name valid? {{ nameInput.valid }}</p>
+<span *ngIf="user.name.toUpperCase() === 'ADMIN'" style="color: red;">Invalid username</span>
 
 
-<br><br><br>
+<br><br><br><br>
 
-<label for="age">Insert your age: </label>
-<input type="number" min="0" max="99" #ageInput="ngModel" [(ngModel)]="user.age">
+<label for="age">Insert your age</label>
+<input type="number" min="0" max="99" [(ngModel)]="user.age">
 <br>
-<p>Is age valid? {{ ageInput.valid }} </p>
+<span *ngIf="user.age < 18; else elseIsMayor" style="color: red;">
+  Invalid user, is minor age
+</span>
+
+<ng-template #elseIsMayor>
+  <span style="color: green;">
+    Valid user :D
+  </span>
+</ng-template>
