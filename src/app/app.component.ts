@@ -6,10 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  friends: string[] = [
-    'Ari',
-    'Ayken',
-    'Kayzen',
-    'Vasirus'
-  ]
+  deleteTask(index: number) {
+    this.todos.splice(index, 1);
+
+  }
+
+  keyHandler() {
+    this.addTask()
+  }
+
+  addTask() {
+    this.todos.push(this.newTask);
+    this.newTask = '';
+  }
+
+  todos: string[] = []
+  newTask: string = ''
 }

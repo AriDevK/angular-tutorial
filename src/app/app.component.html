@@ -1,5 +1,10 @@
-<h1>ngFor</h1>
+<h1>ngFor Dynamic</h1>
 
-<ul *ngFor="let friend of friends; index as i">
-  <li>[{{ i }}] {{ friend }}</li>
+<label for="todo">Insert a new Task:</label> <br>
+<input type="text" [(ngModel)]="newTask" (keyup.Enter)="keyHandler()">
+<button (click)="addTask()">Add</button>
+
+<h2 *ngIf="todos.length === 0">Please insert tasks</h2>
+<ul *ngFor="let task of todos; index as i">
+  <li>{{ task }} <span (click)="deleteTask(i)" style="color: red;">[ DELETE ]</span> </li>
 </ul>
