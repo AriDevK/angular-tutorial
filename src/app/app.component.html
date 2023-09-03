@@ -1,6 +1,8 @@
-<h1>Events</h1>
+<h1>Events with parameters</h1>
 
-<h1>{{counter}}</h1>
-<button (click)="increaseCounter()">Increase</button>
-<button (click)="decreaseCounter()">Decrease</button>
-<button (click)="resetCounter()">Reset Counter</button>
+<h1>Hello {{ username }}</h1>
+
+<br>
+
+<label for="username">Insert your username: </label>
+<input type="text" (keyup)="onInputHandler($event)">

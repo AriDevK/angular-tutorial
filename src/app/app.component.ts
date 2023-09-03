@@ -6,19 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  resetCounter() {
-    this.counter = 0;
+  onInputHandler(event: Event) {
+    let input = event.target as HTMLInputElement;
+    this.username = input.value;
   }
-  decreaseCounter() {
-    if (this.counter - 1 >= 0) {
-      this.counter--;
-    }
-    else{
-      alert('You cant decrement more the counter');
-    }
-  }
-  increaseCounter() {
-    this.counter++;
-  }
-  counter = 0
+  username = ""
 }
