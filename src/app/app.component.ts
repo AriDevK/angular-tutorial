@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tutorial'
+  today = new Date()
+  lastMonth = new Date('2023/08/04')
 }
