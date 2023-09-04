@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { product } from 'src/app/models/product.models';
 
 @Component({
@@ -6,22 +6,18 @@ import { product } from 'src/app/models/product.models';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit, OnDestroy {
-  counter = 0;
-  private counterTimer : number | undefined;
-
-  ngOnInit(): void {
-    this.counterTimer = window.setInterval(() => this.counter++, 1000);
-  }
-
-  ngOnDestroy(): void {
-    window.clearInterval(this.counterTimer)
-  }
+export class ProductComponent {
 
   @Input() product: product = {
     id: '0',
     name: '-',
     price: 0,
     img: './assets/images/image_not_found.jpeg'
+  }
+
+  @Output() addedProduct = new EventEmitter<product>();
+
+  addToCart() {
+    this.addedProduct.emit(this.product);
   }
 }

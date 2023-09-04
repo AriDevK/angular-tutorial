@@ -1,7 +1,6 @@
 <h1>{{ product.name }} ${{ product.price }}</h1>
 <app-img [img]="product.img"></app-img>
-<br>
+<br><br>
 <small>
-  ID: {{ product.id }}
-  Counter {{ counter }}
+  <button (click)="addToCart()">Add to Cart</button>
 </small>
