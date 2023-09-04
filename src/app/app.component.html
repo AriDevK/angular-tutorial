@@ -1,6 +1,3 @@
-<div>
-  <label>Parent Data:</label><br>
-  <input type="text" [(ngModel)]="imgData">
+<div class="product-container">
+  <app-product [product]="product" *ngFor="let product of products"></app-product>
 </div>
-<br>
-<app-img (loaded)="onChildLoaded($event)" [img]="imgData"></app-img>
