@@ -1,4 +1,4 @@
-<h1>{{ product.title }} ${{ product.price }}</h1>
+<h3>{{ product.title | uppercase }} {{ product.price | currency: 'USD' }}</h3>
 <app-img [img]="product.image"></app-img>
 <br><br>
 <small>
