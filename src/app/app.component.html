@@ -1,9 +1,31 @@
-<h1>Fumo Product List</h1>
-<hr>
 
-<div class="fumoGrid">
-  <div *ngFor="let fumo of fumoProducts">
-    <h3>{{ fumo.name }} ${{ fumo.price }}</h3>
-    <img [src]="fumo.image" alt={{fumo.name}}>
-  </div>
+<div class="card">
+  <h1>Register</h1>
+  <hr>
+
+  <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+    <label>Username
+      <span *ngIf="inputUsername.invalid">*</span>
+    </label>
+
+    <input type="text" required name="username" [(ngModel)]="registerInfo.username" #inputUsername="ngModel" >
+    <br>
+
+    <label>E-mail
+      <span *ngIf="inputEmail.invalid">*</span>
+    </label>
+
+    <input type="email" required name="email" #inputEmail="ngModel" [(ngModel)]="registerInfo.email">
+    <br>
+
+    <label>Password
+      <span *ngIf="inputPassword.invalid">*</span>
+    </label>
+
+    <input type="password" required name="password" #inputPassword="ngModel" [(ngModel)]="registerInfo.password">
+    <br>
+    <br>
+    <button [disabled]="registerForm.invalid" type="submit" >Submit</button>
+
+  </form>
 </div>

@@ -1,31 +1,66 @@
-.fumoGrid {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 40px;
-
-  div {
-    margin-top: 20px;
-    border: 2px solid lightgray;
-    border-radius: 5px;
-    height: 100%;
-
-    h3{
-      font-weight: bolder;
-    }
-
-    img{
-      width: 200px;
-    }
-  }
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media screen and (min-width: 40em) {
-  .fumoGrid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 35px;
+h1{
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+hr {
+  width: 75%;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle !important;
+
+  margin-left: 300px;
+  margin-right: 300px;
+  padding-bottom: 50px;
+  background-color: white;
+
+  form {
+
+    width: 100%;
     text-align: center;
-    margin-top: 40px;
+
+    label {
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-size: large;
+      display: block;
+    }
+
+    input {
+      border-radius: 5px;
+      height: 30px;
+      width: 75%;
+    }
+
+    button {
+      margin-top: 20px;
+      height: 30px;
+      width: 75%;
+      background-color: darkseagreen;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      margin-top: 20px;
+      background-color: lightgray;
+      cursor: default;
+    }
+
+    span {
+      color: red;
+    }
   }
 }
