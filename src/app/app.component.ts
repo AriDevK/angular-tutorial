@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  onRegister() {
-    console.log(this.registerInfo)
-    alert('Success')
-  }
-  registerInfo = {
-    username: '',
-    email: '',
-    password: ''
-  }
+  imgData = 'https://avatars.githubusercontent.com/u/42656298?v=4'
 }

@@ -1,1 +1,6 @@
-<app-img></app-img>
+<div>
+  <label>Parent Data:</label><br>
+  <input type="text" [(ngModel)]="imgData">
+</div>
+<br>
+<app-img [img]="imgData"></app-img>
