@@ -3,4 +3,4 @@
   <input type="text" [(ngModel)]="imgData">
 </div>
 <br>
-<app-img [img]="imgData"></app-img>
+<app-img (loaded)="onChildLoaded($event)" [img]="imgData"></app-img>
