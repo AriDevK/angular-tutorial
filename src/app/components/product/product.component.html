@@ -1,4 +1,9 @@
-<h3>{{ product.title | uppercase | reverse }} {{ product.price | currency: 'USD' }}</h3>
+<h3>
+  {{ product.title | uppercase | reverse }}
+  <span appHighlight>
+    {{ product.price | currency: 'USD' }}
+  </span>
+</h3>
 <app-img [img]="product.image"></app-img>
 <br><br>
 <small>
